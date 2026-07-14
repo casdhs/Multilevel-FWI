@@ -28,6 +28,7 @@ hierarchical structure naturally motivates a coarse-to-fine inversion procedure.
 ├── run.sh                 # Convenience script that runs the full pipeline (data generation + inversion).
 ├── model_data/            # True / initial velocity models
 ├── tools/                 # Some utility functions
+├── asset/                 # Some results folder
 ├── Notebooks/             # Jupyter notebook versions of the scripts above (exploratory / step-by-step use)
 └── README.md
 ```
@@ -92,16 +93,10 @@ bash run.sh
 
 ## Results
 
-TODO: add example figures comparing the true model, initial model, and the inverted models produced by
-each strategy (conventional MS vs. Laplacian-pyramid vs. Gaussian-pyramid), plus convergence/loss curves
-from `log_data/`, ideally on the Marmousi 2 / BP 2004 / 3D SEG-EAGE salt models used in the paper.
-
 ```markdown
-![True vs Inverted Model](docs/images/velocity_comparison.png)
-![Convergence Curves](docs/images/loss_curves.png)
+![True vs initial Model](asset/true_init.png)
+![FWI-MS results](asset/fwi_ms.png)
 ```
-
-Upload the images to a `docs/images/` folder in the repo and update the paths above.
 
 ---
 
