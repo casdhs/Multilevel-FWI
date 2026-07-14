@@ -1,16 +1,6 @@
-# Seismic FWI — Multi-Scale and Multi-Level (Laplacian/Gaussian Pyramid) Full Waveform Inversion
+# Multi-Level (Laplacian/Gaussian Pyramid) Full Waveform Inversion
 
-This repository implements **Seismic Full Waveform Inversion (FWI)** on synthetic data, comparing a
-classical **frequency-continuation multi-scale (MS)** strategy against two **multi-level strategies**
-built on **image pyramids** (Laplacian and Gaussian) to mitigate cycle-skipping and improve convergence
-on complex velocity models.
-
-All experiments were run and tested on an **NVIDIA RTX 4090 GPU (24 GB memory)**.
-
-> ⚠️ This README is a draft based on the current file/folder structure. Please review the notebook
-> descriptions and fill in the sections marked `TODO` (e.g. framework, paper reference, `04_fwi_ms_gs.ipynb`
-> purpose, and result figures) before publishing.
-
+This repository implements **Full Waveform Inversion (FWI)** and provides a comparative study between the conventional **frequency-continuation multi-scale (MS)** strategy and two **image-pyramid-based multi-level FWI** strategies using Laplacian and Gaussian pyramids.
 ---
 
 ## Overview
