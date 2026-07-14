@@ -92,7 +92,7 @@ bash run.sh
 ---
 
 ## Results
-
+> Note: Only partial results are shown here.
 ### True vs Initial Model
 <p align="center">
   <img src="asset/true_init.png" alt="True vs initial Model" width="600">
@@ -113,16 +113,4 @@ bash run.sh
   <img src="asset/fwi_ml_gau.png" alt="FWI-ML-GAU results" width="600">
 </p>
 
-## Citation
-
-TODO: add the full citation once the paper is published, e.g.:
-
-```
-Author(s), "Multiscale full waveform inversion using pyramid representations", Journal/Conference, Year.
-```
-
----
-
-## License
-
-TODO: add a LICENSE file and reference it here (e.g. MIT).
+If you have any questions, feel free to reach out to faxuanwu@126.com.
