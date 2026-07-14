@@ -93,11 +93,15 @@ bash run.sh
 
 ## Results
 
-```markdown
-![True vs initial Model](asset/true_init.png)
-![FWI-MS results](asset/fwi_ms.png)
-```
+### True vs Initial Model
+<p align="center">
+  <img src="asset/true_init.png" alt="True vs initial Model" width="600">
+</p>
 
+### FWI-MS Results
+<p align="center">
+  <img src="asset/fwi_ms.png" alt="FWI-MS results" width="600">
+</p>
 ---
 
 ## Citation
