@@ -21,26 +21,16 @@ hierarchical structure naturally motivates a coarse-to-fine inversion procedure.
 
 ```
 .
-├── 01_gen_data.py        # Generate observed data
-├── 02_fwi_ms.py           # Conventional multiscale FWI (frequency continuation)
-├── 03_fwi_ml_lap.py       # Proposed multilevel FWI — Laplacian pyramid
-├── 04_fwi_ml_gau.py       # Proposed multilevel FWI — Gaussian pyramid
-├── run.sh                 # Runs the full pipeline end-to-end
+├── 01_gen_data.py        # Generates observed data using true model.
+├── 02_fwi_ms.py           # Conventional frequency continuation (MS) FWI (low-to-high frequency inversion).
+├── 03_fwi_ml_lap.py       # Proposed multilevel FWI based on a **Laplacian pyramid** representation.
+├── 04_fwi_ml_gau.py       # Proposed multilevel FWI based on a **Gaussian pyramid** representation.
+├── run.sh                 # Convenience script that runs the full pipeline (data generation + inversion).
 ├── model_data/            # True / initial velocity models
-├── tools/                 # Shared utility functions
+├── tools/                 # Some utility functions
 ├── Notebooks/             # Jupyter notebook versions of the scripts above (exploratory / step-by-step use)
 └── README.md
 ```
-
-### Scripts
-
-| Script | Description |
-|---|---|
-| `01_gen_data.py` | Generates observed data using true model. |
-| `02_fwi_ms.py` | Conventional frequency continuation (MS) FWI (low-to-high frequency inversion). |
-| `03_fwi_ml_lap.py` | Proposed multilevel FWI based on a **Laplacian pyramid** representation. |
-| `04_fwi_ml_gau.py` | Proposed multilevel FWI based on a **Gaussian pyramid** representation. |
-| `run.sh` | Convenience script that runs the full pipeline (data generation + inversion). |
 
 Jupyter notebook equivalents of these scripts (`01_gen_data.ipynb`, `02_fwi_ms.ipynb`, `03_fwi_ml_lap.ipynb`,
 `04_fwi_ml_gau.ipynb`) are kept in `Notebooks/` for interactive/exploratory use.
@@ -50,8 +40,8 @@ Jupyter notebook equivalents of these scripts (`01_gen_data.ipynb`, `02_fwi_ms.i
 - Python 3.+
 - PyTorch 2.+
 - [Deepwave](https://github.com/ar4/deepwave)
-- `pyramid_loss` — our own package (published on PyPI) implementing the Gaussian/Laplacian pyramid
-  decompositions and the associated multilevel loss functions used in this work
+- [pyramid_loss](https://pypi.org/project/pyramid-loss/) — our own package (published on PyPI) implementing the Gaussian/Laplacian pyramid
+  decompositions.
 - NumPy, SciPy, Matplotlib
 - Jupyter Notebook (only needed to run the notebooks under `Notebooks/`)
 
