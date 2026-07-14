@@ -49,42 +49,44 @@ Hardware used for all experiments in this repository:
 
 - **GPU:** NVIDIA RTX 4090 (24 GB VRAM)
 
-```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
-pip install -r requirements.txt
-```
-
-> TODO: add a `requirements.txt` (or `environment.yml`) listing the exact package versions used.
-
 ---
 
 ## Usage
 
-The simplest way to reproduce the full pipeline (data generation + inversion) is:
+### Option 1: Quick start (recommended)
 
 ```bash
+git clone https://github.com/<your-username>/<your-repo>.git
+cd <your-repo>
 bash run.sh
 ```
 
-This will automatically create the `obs_data/`, `source/`, `src_rec_loc/`, `log_data/`, and `rec/`
-folders and populate them as the pipeline runs.
+`run.sh` runs the full pipeline (data generation + inversion) end-to-end, automatically creating the
+`obs_data/`, `source/`, `src_rec_loc/`, `log_data/`, and `rec/` folders and populating them as it runs.
 
-Alternatively, the steps can be run individually:
+### Option 2: Step by step
 
-1. **Generate data** — `python 01_gen_data.py`
+1. **Generate data**
+
+   ```bash
+   python 01_gen_data.py
+   ```
+
    Builds the true/initial velocity models and simulates observed data.
 
-2. **Run inversion** — choose one of:
-   - `python 02_fwi_ms.py` (conventional multiscale)
-   - `python 03_fwi_ml_lap.py` (Laplacian-pyramid multilevel)
-   - `python 04_fwi_ml_gau.py` (Gaussian-pyramid multilevel)
+2. **Run inversion** — choose one:
+
+   ```bash
+   python 02_fwi_ms.py       # conventional multiscale
+   python 03_fwi_ml_lap.py   # Laplacian-pyramid multilevel
+   python 04_fwi_ml_gau.py   # Gaussian-pyramid multilevel
+   ```
 
 3. **Inspect results** — inverted models are saved to `rec/`, and inversion logs (loss/error curves) are
    saved to `log_data/`.
 
-For interactive/exploratory use, the same pipeline is also available as Jupyter notebooks under
-`Notebooks/`.
+> For interactive/exploratory use, the same pipeline is also available as Jupyter notebooks under
+> `Notebooks/`.
 
 ---
 
