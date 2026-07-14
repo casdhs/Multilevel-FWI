@@ -12,8 +12,7 @@ This repository implements two novel multiscale inversion methods for time-domai
 **Gaussian** and **Laplacian pyramid** representations. Gaussian and Laplacian pyramids generate a set
 of low-pass and band-pass representations of the input data, respectively, allowing both observed and
 synthetic data to be represented across a hierarchy of frequency scales — higher pyramid levels
-emphasize low-frequency information, while lower levels preserve high-frequency components. This
-hierarchical structure naturally motivates a coarse-to-fine inversion procedure.
+emphasize low-frequency information, while lower levels preserve high-frequency components. Motivated by conventional frequency-continuation strategy, we adopt a coarse-to-fine inversion strategy. 
 
 ---
 
