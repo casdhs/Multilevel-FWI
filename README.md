@@ -102,7 +102,16 @@ bash run.sh
 <p align="center">
   <img src="asset/fwi_ms.png" alt="FWI-MS results" width="600">
 </p>
----
+
+### FWI-ML-LAP Results
+<p align="center">
+  <img src="asset/fwi_ml_lap.png" alt="FWI-ML-LAP results" width="600">
+</p>
+
+### FWI-ML-GAU Results
+<p align="center">
+  <img src="asset/fwi_ml_gau.png" alt="FWI-ML-GAU results" width="600">
+</p>
 
 ## Citation
 
